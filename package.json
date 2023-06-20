@@ -1,0 +1,61 @@
+{
+  "name": "center-ssr",
+  "description": "App with Routing built-in (recommended)",
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview --open",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/runtime": "^7.22.5",
+    "@builder.io/qwik": "0.103.0",
+    "@builder.io/qwik-city": "~0.103.0",
+    "@builder.io/qwik-react": "0.5.0",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
+    "@mui/material": "5.11.9",
+    "@mui/x-data-grid": "5.17.24",
+    "@types/eslint": "8.37.0",
+    "@types/node": "^18.15.9",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "5.59.0",
+    "@typescript-eslint/parser": "5.59.0",
+    "eslint": "8.38.0",
+    "eslint-plugin-qwik": "0.103.0",
+    "less": "3.7.1",
+    "less-loader": "^11.1.3",
+    "prettier": "2.8.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "typescript": "5.0.4",
+    "undici": "5.21.2",
+    "vite": "4.2.2",
+    "vite-plugin-imp": "^2.4.0",
+    "vite-plugin-legacy": "^2.1.0",
+    "vite-svg-loader": "^4.0.0",
+    "vite-tsconfig-paths": "4.2.0"
+  },
+  "dependencies": {
+    "@sl/icons": "^1.20.2",
+    "antd": "4.10.3",
+    "jsdom": "^22.1.0",
+    "rc-notification": "4.5.7"
+  }
+}
