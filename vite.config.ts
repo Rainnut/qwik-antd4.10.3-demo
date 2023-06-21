@@ -13,13 +13,14 @@ export default defineConfig(() => {
     //     '.js': 'jsx', // 将 .js 文件视为 JSX 文件处理
     //   },
     // },
-    // css: {
-    //   preprocessorOptions: {
-    //     less: {
-    //       javascriptEnabled: true,
-    //     },
-    //   },
-    // },
+    css: {
+      preprocessorOptions: {
+        less: {
+          // 支持内联 JavaScript
+          javascriptEnabled: true,
+        }
+      }
+    },
     plugins: [
       qwikCity(),
       qwikVite(),
@@ -30,9 +31,7 @@ export default defineConfig(() => {
         libList: [
           {
             libName: "antd",
-            style(name) {
-              return `antd/es/${name}/style/css.js`
-            }
+            style: (name) => `antd/lib/${name}/style/index.less`,
           },
         ],
       })
